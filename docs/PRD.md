@@ -1,58 +1,37 @@
 # Product Requirements Document (PRD)
-## My Dolla $ign - Financial Literacy Platform
+## My Dolla $ign - Budget Education Platform
 
 **Version:** 1.0  
 **Date:** February 15, 2026  
-**Authors:** Rene Sanchez, Hugo Padilla, Gauge Maltos, Allison Harvel
+**Authors:** Hugo, Rene, Gauge, Allison
 
 ---
 
 ## 1. Problem + Target Users
 
-<!-- 
-==========================================
-ASSIGNED TO: Member 4 (Documentation Lead)
-TODO: Expand these 2-4 sentences based on your research
-==========================================
--->
-
-**Problem:** Many young adults and first-time earners lack access to trustworthy, easy-to-understand financial education. Without proper guidance, they struggle with basic budgeting, saving habits, and understanding investment concepts, leading to poor financial decisions and stress.
+**Problem:** Many young adults and first-time earners lack access to trustworthy, easy-to-understand financial education. Without proper guidance, they struggle with basic budgeting and saving habits, leading to poor financial decisions, unnecessary stress, and debt accumulation.
 
 **Target Users:** 
 - College students managing money for the first time
 - Young adults (18-30) entering the workforce
 - First-time earners with limited financial education background
 
-**Why It Matters:** Financial literacy is a critical life skill that affects long-term well-being. By providing accessible education early, we can help users build healthy financial habits and avoid common pitfalls like debt accumulation and poor savings practices.
+**Why It Matters:** Financial literacy is a critical life skill that affects long-term well-being. By providing accessible budgeting education early, we can help users build healthy financial habits and avoid common pitfalls like overspending and poor savings practices.
 
 ---
 
 ## 2. Goal / Success Metrics
 
-<!-- 
-==========================================
-ASSIGNED TO: Member 4 (Documentation Lead)
-TODO: Refine these metrics based on team discussion
-==========================================
--->
-
 | Metric | Target | How We'll Measure |
 |--------|--------|-------------------|
-| User Comprehension | 80%+ users understand budget breakdown | Post-analysis survey |
+| User Comprehension | 80%+ users understand their budget breakdown | Post-analysis survey |
 | Task Completion | Users complete budget input in < 5 minutes | Time tracking |
 | User Satisfaction | 4/5 average rating | In-app feedback form |
-| AI Response Quality | Accurate, helpful explanations | Manual review of outputs |
+| AI Response Quality | Accurate, helpful budget explanations | Manual review of outputs |
 
 ---
 
 ## 3. MVP User Stories
-
-<!-- 
-==========================================
-ASSIGNED TO: Member 3 (AI/ML Lead) & Member 4 (Documentation Lead)
-TODO: Review and add any missing user stories
-==========================================
--->
 
 1. **As a** student, **I want** to input my monthly income and expenses, **so that** I can see a clear breakdown of where my money goes.
 
@@ -62,13 +41,11 @@ TODO: Review and add any missing user stories
 
 4. **As a** user, **I want** to categorize my expenses (rent, food, entertainment, etc.), **so that** I can identify areas where I might overspend.
 
-5. **As a** beginner investor, **I want** to learn basic investment terms (stocks, ETFs, risk), **so that** I can start building financial knowledge.
+5. **As a** user, **I want** to receive personalized budgeting tips based on my data, **so that** the advice is relevant to my situation.
 
-6. **As a** user, **I want** to receive personalized budgeting tips based on my data, **so that** the advice is relevant to my situation.
+6. **As a** user, **I want** to see visual representations of my budget, **so that** I can quickly understand my financial snapshot.
 
-7. **As a** user, **I want** to see visual representations of my budget, **so that** I can quickly understand my financial snapshot.
-
-8. **As a** user, **I want** the platform to be simple and jargon-free, **so that** I don't feel overwhelmed by financial terminology.
+7. **As a** user, **I want** the platform to be simple, **so that** I don't feel overwhelmed by financial terminology.
 
 ---
 
@@ -76,103 +53,87 @@ TODO: Review and add any missing user stories
 
 ### Must-Have Features (MVP)
 
-<!-- 
-==========================================
-ASSIGNED TO: Member 1 (Frontend) & Member 2 (Backend)
-TODO: Confirm technical feasibility of each feature
-==========================================
--->
-
 1. **Budget Input Form**
-   - Income input field
+   - Income input field (monthly, after taxes)
    - Expense categories: Rent/Housing, Food/Groceries, Transportation, Entertainment, Utilities, Savings, Other
-   - Simple, clean UI
+   - Simple, clean UI with real-time total calculation
 
 2. **AI-Generated Budget Analysis**
-   - Spending pattern explanation
-   - Category-by-category breakdown
-   - Simple budgeting tips
+   - Spending pattern explanation in plain English
+   - Category-by-category breakdown with percentages
+   - Personalized budgeting tips based on user's data
+   - Explanation of budgeting concepts (like the 50/30/20 rule)
 
-3. **Investment Literacy Section**
-   - Glossary of basic terms (stocks, ETFs, bonds, risk)
-   - Educational explanations (not financial advice)
-
-4. **Results Display**
-   - Clear budget summary
-   - Visual breakdown (pie chart or bar graph)
-   - Actionable insights
+3. **Results Display**
+   - Clear budget summary showing income vs. expenses
+   - Visual breakdown (progress bars showing percentage per category)
+   - Actionable insights list
 
 ### Nice-to-Have Features (Post-MVP)
 
 - User accounts and saved budgets
-- Budget tracking over time
-- Comparison with recommended budgets (50/30/20 rule)
+- Budget tracking over time (month-to-month comparison)
+- Pie chart or bar chart visualization
 - Mobile-responsive design improvements
-- Export budget as PDF
+- Export budget summary as PDF
 
 ### Non-Goals (What We Will NOT Build)
 
-- **No actual financial advice** - We provide education only, not personalized investment recommendations
-- **No stock trading features** - This is not a brokerage platform
-- **No real-time market data** - We focus on concepts, not live prices
+- **No investment advice** - We provide budgeting education only, not stock/investment recommendations
+- **No stock trading features** - This is not a brokerage or investment platform
+- **No real-time market data** - We focus on personal budgeting, not markets
 - **No user authentication for MVP** - Simplified single-session experience
 - **No payment processing** - Free educational tool
+- **No data persistence** - Budgets are not saved between sessions (MVP)
 
 ---
 
 ## 5. Acceptance Criteria
 
-<!-- 
-==========================================
-ASSIGNED TO: Member 4 (Documentation Lead)
-TODO: Add any additional test cases
-==========================================
--->
-
 ### Budget Input Form
 - [ ] User can enter monthly income (positive numbers only)
-- [ ] User can enter expenses in at least 5 categories
-- [ ] Form validates that expenses don't exceed income (warning, not blocking)
+- [ ] User can enter expenses in at least 6 categories
+- [ ] Form shows real-time total of expenses
+- [ ] Form shows remaining balance (income minus expenses)
+- [ ] Form validates that all inputs are non-negative numbers
 - [ ] Form submits successfully and shows loading state
 
 ### AI Analysis
 - [ ] AI generates budget explanation within 10 seconds
-- [ ] AI response is in plain English (no jargon)
+- [ ] AI response is in plain English (no financial jargon)
 - [ ] AI provides at least 3 actionable insights
-- [ ] AI handles edge cases (zero income, very high expenses)
+- [ ] AI explains what the 50/30/20 rule is
+- [ ] AI handles edge cases (zero income, expenses exceeding income)
+- [ ] AI includes disclaimer that this is educational, not financial advice
 
-### Investment Literacy
-- [ ] User can access glossary of at least 10 financial terms
-- [ ] Each term has a clear, simple explanation
-- [ ] Explanations include real-world examples
+### Results Display
+- [ ] Shows clear breakdown of each expense category
+- [ ] Shows percentage of income for each category
+- [ ] Displays visual progress bars for each category
+- [ ] Lists key insights in bullet point format
 
 ### General
 - [ ] Application loads without errors
 - [ ] All text is readable and accessible
 - [ ] Works on desktop browsers (Chrome, Firefox, Safari)
+- [ ] Page is usable (not necessarily optimized) on mobile
 
 ---
 
 ## 6. Assumptions + Constraints
-
-<!-- 
-==========================================
-ASSIGNED TO: All Team Members
-TODO: Review and update based on your specific situation
-==========================================
--->
 
 ### Assumptions
 - Users have basic computer/internet literacy
 - Users will provide honest income/expense data
 - OpenAI API will remain available and affordable for our use case
 - Users understand this is for educational purposes only
+- Users are inputting monthly (not weekly/yearly) figures
 
 ### Constraints
 
 | Constraint Type | Details |
 |----------------|---------|
-| **Time** | MVP must be complete by Milestone 2 (within 11 weeks) |
+| **Time** | MVP must be complete by Milestone 2 |
 | **Budget** | Limited API costs - must optimize token usage |
 | **Data** | No access to real financial data; user-provided only |
 | **Ethics** | Must include disclaimers that this is NOT financial advice |
@@ -183,6 +144,7 @@ TODO: Review and update based on your specific situation
 - No personal financial data is stored permanently (MVP)
 - Clear disclaimers that AI-generated content is educational, not professional advice
 - No collection of personally identifiable information
+- User data is only used for the current session analysis
 
 ---
 
@@ -190,12 +152,42 @@ TODO: Review and update based on your specific situation
 
 | Section | Primary Owner | Reviewer |
 |---------|--------------|----------|
-| Problem + Users | Member 4 | Member 3 |
-| Success Metrics | Member 4 | All |
-| User Stories | Member 3, Member 4 | All |
-| MVP Scope | Member 1, Member 2 | All |
-| Acceptance Criteria | Member 4 | Member 1, Member 2 |
+| Problem + Users | Allison | Gauge |
+| Success Metrics | Allison | All |
+| User Stories | Gauge, Allison | All |
+| MVP Scope | Hugo, Rene | All |
+| Acceptance Criteria | Allison | Hugo, Rene |
 | Assumptions | All | All |
+
+### Individual Responsibilities
+
+**Hugo (Frontend Lead)**
+- Budget input form UI
+- Results display component
+- Visual breakdown (progress bars)
+- Loading states and error handling
+- Responsive design
+
+**Rene (Backend Lead)**
+- Flask API setup
+- Budget analysis endpoint
+- Input validation
+- Error handling and logging
+- API documentation
+
+**Gauge (AI/ML Lead)**
+- OpenAI API integration
+- Prompt engineering for budget analysis
+- AI response quality testing
+- Edge case handling
+- Fallback responses when API fails
+
+**Allison (Documentation & QA)**
+- PRD maintenance
+- Testing all features
+- Bug documentation
+- User testing coordination
+- Pitch deck preparation
 
 ---
 

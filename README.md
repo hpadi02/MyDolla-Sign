@@ -1,10 +1,10 @@
 # My Dolla $ign
 
-> An AI-powered financial literacy platform that teaches budgeting and investing concepts in simple, easy-to-understand terms for young adults, students, and first-time earners.
+> An AI-powered budget education tool that teaches budgeting concepts in simple, easy-to-understand terms for young adults, students, and first-time earners.
 
 ## Problem We're Solving
 
-Many people struggle to budget, save, and understand investing basics due to a lack of accessible, trustworthy financial guidance. Our platform provides educational budget breakdowns and learning guidance to help users build financial confidence.
+Many people struggle to budget and save due to a lack of accessible, trustworthy financial guidance. Our platform provides educational budget breakdowns and personalized tips to help users build financial confidence.
 
 ## Team Members & Roles
 
@@ -21,7 +21,7 @@ Many people struggle to budget, save, and understand investing basics due to a l
 
 1. **Budget Input Form** - Categorized expense breakdown (income, rent, food, etc.)
 2. **AI-Generated Analysis** - Explanation of spending patterns and budgeting concepts
-3. **Investment Literacy Module** - Introduction to terms like stocks, ETFs, and risk evaluation
+3. **Budgeting Tips** - Personalized recommendations based on user's data (e.g., 50/30/20 rule)
 
 ## Tech Stack
 

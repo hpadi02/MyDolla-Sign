@@ -4,7 +4,7 @@ This document outlines how team members should collaborate on this project.
 
 ## Team Roles and Responsibilities
 
-### Member 1 - Frontend Lead
+### Hugo - Frontend Lead
 **Primary Responsibilities:**
 - All React components in `/frontend/src/components/`
 - UI/UX design and styling with Tailwind CSS
@@ -21,19 +21,18 @@ This document outlines how team members should collaborate on this project.
 **Your TODOs:**
 - [ ] Set up the development environment (`npm install`)
 - [ ] Implement form validation in `BudgetForm.jsx`
-- [ ] Add chart visualization in `BudgetResults.jsx`
+- [ ] Add visual breakdown (progress bars) in `BudgetResults.jsx`
 - [ ] Make the UI responsive for mobile
 - [ ] Test all user interactions
 
 ---
 
-### Member 2 - Backend Lead
+### Rene - Backend Lead
 **Primary Responsibilities:**
 - Flask API setup and configuration
 - API route handlers
 - Data validation and error handling
-- Database setup (if needed)
-- Deployment configuration
+- Server deployment configuration
 
 **Files You Own:**
 - `backend/main.py`
@@ -46,34 +45,33 @@ This document outlines how team members should collaborate on this project.
 - [ ] Configure environment variables (copy `.env.example` to `.env`)
 - [ ] Test API endpoints with Postman or curl
 - [ ] Add proper error logging
-- [ ] Set up rate limiting for API endpoints
+- [ ] Create fallback response when AI fails
 
 ---
 
-### Member 3 - AI/ML Lead
+### Gauge - AI/ML Lead
 **Primary Responsibilities:**
 - OpenAI API integration
 - Prompt engineering for budget analysis
 - AI response quality and safety
 - Testing edge cases with AI
-- Financial literacy content accuracy
 
 **Files You Own:**
 - `backend/app/services/ai_service.py`
 - AI prompts and configuration
-- Glossary content (review)
 
 **Your TODOs:**
 - [ ] Get OpenAI API key and add to `.env`
 - [ ] Design and test the budget analysis prompt
-- [ ] Test with various budget scenarios
+- [ ] Test with various budget scenarios (student, working adult)
+- [ ] Ensure AI explains 50/30/20 rule clearly
 - [ ] Ensure AI doesn't give harmful financial advice
 - [ ] Document prompt engineering decisions
 - [ ] Lead the spike demo
 
 ---
 
-### Member 4 - Documentation & QA Lead
+### Allison - Documentation & QA Lead
 **Primary Responsibilities:**
 - PRD documentation
 - Spike plan documentation
@@ -88,11 +86,11 @@ This document outlines how team members should collaborate on this project.
 - `README.md` (updates)
 
 **Your TODOs:**
-- [ ] Fill in team member names in all docs
 - [ ] Review and refine PRD sections
 - [ ] Create the pitch deck
 - [ ] Test the application end-to-end
 - [ ] Document any bugs found
+- [ ] Coordinate user testing with non-CS people
 - [ ] Prepare for the demo presentation
 
 ---
@@ -107,14 +105,14 @@ This document outlines how team members should collaborate on this project.
    cd MyDolla-Sign
    ```
 
-2. **Set up frontend:**
+2. **Set up frontend (Hugo):**
    ```bash
    cd frontend
    npm install
    npm run dev
    ```
 
-3. **Set up backend (in a new terminal):**
+3. **Set up backend (Rene, Gauge):**
    ```bash
    cd backend
    python -m venv venv
